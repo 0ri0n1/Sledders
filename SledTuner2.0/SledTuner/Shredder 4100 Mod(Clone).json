@@ -1,0 +1,71 @@
+{
+    "Shredder 4100 Mod(Clone)": {
+      "SnowmobileController": {
+        "leanSteerFactorSoft": 1.5,
+        "leanSteerFactorTrail": 0.8,
+        "throttleExponent": 2,
+        "drowningDepth": 0.5,
+        "drowningTime": 0.5,
+        "isEngineOn": true,
+        "isStuck": true,
+        "canRespawn": true,
+        "hasDrowned": false,
+        "driverTorgueFactorRoll": 180,
+        "driverTorgueFactorPitch": 240,
+        "snowmobileTorgueFactor": 1,
+        "rpmSensitivity": 0.03,
+        "rpmSensitivityDown": 0.05,
+        "minThrottleOnClutchEngagement": 0.205,
+        "clutchRpmMin": 3800,
+        "clutchRpmMax": 4600,
+        "isHeadlightOn": true,
+        "wheelieThreshold": -30
+      },
+  
+      "SnowmobileControllerBase": {
+        "skisMaxAngle": 45,
+        "driverZCenter": -0.1,
+        "enableVerticalWeightTransfer": true,
+        "trailLeanDistance": 0.15,
+        "switchbackTransitionTime": 0.2
+      },
+  
+      "MeshInterpretter": {
+        "power": 149920,
+        "powerEfficiency": 0.9,
+        "breakForce": 5000,
+        "frictionForce": 300,
+        "trackMass": 32,
+        "coefficientOfFriction": 0.45,
+        "snowPushForceFactor": 10,
+        "snowPushForceNormalizedFactor": 550,
+        "snowSupportForceFactor": 600,
+        "maxSupportPressure": 0.5,
+        "lugHeight": 0.23,
+        "snowOutTrackWidth": 0.4,
+        "pitchFactor": 7
+      },
+  
+      "SnowParameters": {
+        "snowNormalConstantFactor": 1.2,
+        "snowNormalDepthFactor": 3,
+        "snowFrictionFactor": 0.1
+      },
+  
+      "SuspensionController": {
+        "suspensionSubSteps": 100,
+        "antiRollBarFactor": 5000,
+        "skiAutoTurn": true,
+        "trackRigidityFront": 20,
+        "trackRigidityRear": 20
+      },
+  
+      "Rigidbody": {
+        "mass": 220,
+        "drag": 8,
+        "angularDrag": 8,
+        "maxAngularVelocity": 20
+      }
+    }
+  }
+  
