@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build"
+         xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EA9CE783-17EE-48D1-9984-BFDA6FAB2CCD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SledTunerProject</RootNamespace>
+    <AssemblyName>SledTuner</AssemblyName>
+
+    <!-- Now targeting .NET Framework 4.7.2 -->
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+
+  <!-- Debug config -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <!-- Release config -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- MelonLoader reference (prefer the net35 or net4.x version if you have it) -->
+    <Reference Include="MelonLoader">
+      <HintPath>D:\SteamLibrary\steamapps\common\Sledders\MelonLoader\net35\MelonLoader.dll</HintPath>
+    </Reference>
+
+    <!-- Assembly-CSharp -->
+    <Reference Include="Assembly-CSharp">
+      <HintPath>D:\SteamLibrary\steamapps\common\Sledders\Sledders_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+
+    <!-- UnityEngine CoreModule -->
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\SteamLibrary\steamapps\common\Sledders\Sledders_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+
+    <!-- UnityEngine CoreModule -->
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>D:\SteamLibrary\steamapps\common\Sledders\Sledders_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+
+    <!-- UnityEngine.InputLegacyModule if you need Input.GetKeyDown, etc. -->
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>D:\SteamLibrary\steamapps\common\Sledders\Sledders_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+
+    <!-- Newtonsoft.Json, referencing a net35 or net4.x version if MelonLoader includes it -->
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>D:\SteamLibrary\steamapps\common\Sledders\MelonLoader\net35\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- If you have a Properties folder with AssemblyInfo.cs -->
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Your source files -->
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SledTuner.cs" />
+    <Compile Include="SledTunerVehConf.cs" />
+  </ItemGroup>
+
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
+</Project>
